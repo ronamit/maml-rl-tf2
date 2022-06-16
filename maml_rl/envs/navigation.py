@@ -56,6 +56,6 @@ class Navigation2DEnv(gym.Env):
         x = self._state[0] - self._goal[0]
         y = self._state[1] - self._goal[1]
         reward = -np.sqrt(x ** 2 + y ** 2)
-        done = ((np.abs(x) < 0.01) and (np.abs(y) < 0.01))
+        done = bool(((np.abs(x) < 0.01) and (np.abs(y) < 0.01)))
 
         return self._state, reward, done, self._task
