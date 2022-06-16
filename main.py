@@ -18,7 +18,7 @@ def total_rewards(episodes_rewards, aggregation=tf.reduce_mean):
 
 
 def main(args):
-    continuous_actions = (args.env_name in ['AntVel-v1', 'AntDir-v1',
+    continuous_actions = (args.env_name in ['AntVel-v1',  'AntDir-v1',
                                             'AntPos-v0', 'HalfCheetahVel-v1',
                                             'HalfCheetahDir-v1', '2DNavigation-v0'])
 
